@@ -13,6 +13,7 @@ namespace :db do
   desc "drop and recreate the db"
   task :reset => [:drop, :migrate]
 
+
   desc "drop the db"
   task :drop do
     connection_details = YAML::load(File.open('config/database.yml'))
